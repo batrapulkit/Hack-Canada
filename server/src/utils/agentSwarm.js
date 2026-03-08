@@ -74,7 +74,7 @@ export class AgentSwarm {
             if (!GEMINI_API_KEY) throw new Error("Fallback failed: No GEMINI_API_KEY found.");
 
             const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
-            const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+            const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-lite" });
 
             const fullPrompt = `${systemInstruction}\n\nUser Prompt: ${userPrompt}`;
             const result = await model.generateContent(fullPrompt);
@@ -173,14 +173,14 @@ STRICT REQUIREMENTS:
                     let text;
                     try {
                         // Try 2.0 Flash first
-                        const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+                        const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-lite" });
                         const result = await model.generateContent(`${plannerPrompt}\n\nUser Input: ${plannerInput}`);
                         text = result.response.text();
                     } catch (gemini2Err) {
-                        console.warn('Gemini 2.0 Flash failed:', gemini2Err.message);
+                        console.warn('Gemini 2.5 Flash Lite failed:', gemini2Err.message);
                         if (gemini2Err.message.includes('429')) {
-                            this.onAgentThought('planner', 'Gemini 2.0 Quota busy. Trying Gemini 1.5 Flash...');
-                            const model15 = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+                            this.onAgentThought('planner', 'Gemini 2.5 Quota busy. Retrying...');
+                            const model15 = genAI.getGenerativeModel({ model: "gemini-2.5-flash-lite" });
                             const result15 = await model15.generateContent(`${plannerPrompt}\n\nUser Input: ${plannerInput}`);
                             text = result15.response.text();
                         } else {

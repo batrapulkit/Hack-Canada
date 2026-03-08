@@ -122,7 +122,7 @@ Return ONLY a raw JSON object in this exact format: {"tag": "selected-tag"}. Do 
       const { GoogleGenerativeAI } = await import('@google/generative-ai');
       const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
       const model = genAI.getGenerativeModel({
-        model: process.env.GEMINI_MODEL || 'gemini-1.5-flash',
+        model: process.env.GEMINI_MODEL || 'gemini-2.5-flash-lite',
       });
       const result = await model.generateContent(
         `${systemPrompt}\n\n${itinerary_text}`

@@ -289,7 +289,7 @@ export const qualifyLead = async (req, res) => {
       5. Next Steps
     `;
 
-    const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash-lite' });
     const result = await model.generateContent(prompt);
     const response = await result.response;
     const qualification = response.text();
@@ -325,7 +325,7 @@ export const getFollowUpSuggestions = async (req, res) => {
       Provide subject lines, talking points, value props, questions, and timing.
     `;
 
-    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-lite" });
     const result = await model.generateContent(prompt);
     const response = await result.response;
     const suggestions = response.text();
@@ -414,7 +414,7 @@ export const getLeadAIScore = async (req, res) => {
       Respond ONLY with a number 1 to 10.
     `;
 
-    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-lite" });
     const result = await model.generateContent(prompt);
     const output = result.response.text().trim();
 

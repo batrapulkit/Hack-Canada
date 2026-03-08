@@ -65,7 +65,7 @@ export const generateItinerary = async (req, res) => {
     // Build a JSON-output prompt (we instruct model to return JSON)
     const daysNum = parseInt((String(duration).match(/\d+/) || [duration])[0] || 1, 10);
 
-    const model = getModel('gemini-2.0-flash');
+    const model = getModel('gemini-2.5-flash-lite');
 
     const intentPrompt = `
 You are an expert travel planner. Produce a DAY-WISE itinerary as valid JSON ONLY.

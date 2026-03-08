@@ -1178,7 +1178,7 @@ export const parseLeadFromText = async (req, res) => {
       if (primaryErr.message && primaryErr.message.includes('429')) {
         // 2. Try Fallback Model (Standard Flash)
         console.log('⚠️ Switching to Fallback Model...');
-        const fallbackModel = getModel(process.env.GEMINI_FALLBACK_MODEL || 'gemini-2.0-flash');
+        const fallbackModel = getModel(process.env.GEMINI_FALLBACK_MODEL || 'gemini-2.5-flash-lite');
         const result = await fallbackModel.generateContent(prompt);
         const response = await result.response;
         raw = response.text();

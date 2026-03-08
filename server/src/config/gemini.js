@@ -11,12 +11,12 @@ if (!process.env.GEMINI_API_KEY) {
 export const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 export function getModel(modelName) {
-  const model = modelName || process.env.GEMINI_MODEL || 'gemini-2.0-flash';
+  const model = modelName || process.env.GEMINI_MODEL || 'gemini-2.5-flash-lite';
   return genAI.getGenerativeModel({ model });
 }
 
 export function getSearchEnabledModel(modelName) {
-  const model = modelName || process.env.GEMINI_MODEL || 'gemini-2.0-flash'; // Standardize on 2.0-flash
+  const model = modelName || process.env.GEMINI_MODEL || 'gemini-2.5-flash-lite'; // Standardize on 2.5-flash-lite
   return genAI.getGenerativeModel({
     model,
     tools: [{ googleSearch: {} }]

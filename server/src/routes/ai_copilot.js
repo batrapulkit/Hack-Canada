@@ -21,7 +21,7 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey);
 const callGemini = async (systemPrompt, userMessage) => {
     if (!GEMINI_API_KEY) throw new Error("No Gemini API key configured.");
     const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-lite" });
     const result = await model.generateContent(`${systemPrompt}\n\n${userMessage}`);
     return result.response.text().trim();
 };

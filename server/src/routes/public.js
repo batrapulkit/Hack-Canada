@@ -101,9 +101,9 @@ Do not output markdown, backticks, or explanations. Only raw JSON.`;
             return res.status(500).json({ error: 'AI key not configured' });
         }
 
-        console.log(`[Public Verify] Verifying via Gemini (${process.env.GEMINI_MODEL || 'gemini-2.0-flash'})...`);
+        console.log(`[Public Verify] Verifying via Gemini (${process.env.GEMINI_MODEL || 'gemini-2.5-flash-lite'})...`);
         const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
-        const model = genAI.getGenerativeModel({ model: process.env.GEMINI_MODEL || 'gemini-2.0-flash' });
+        const model = genAI.getGenerativeModel({ model: process.env.GEMINI_MODEL || 'gemini-2.5-flash-lite' });
         const prompt = `${systemPrompt}\n\n${planText}`;
 
         let verificationResult;
