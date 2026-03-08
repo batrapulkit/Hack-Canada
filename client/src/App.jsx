@@ -13,7 +13,6 @@ import Dashboard from './pages/Dashboard';
 import Clients from './pages/Clients';
 import Itineraries from './pages/Itineraries';
 import ItineraryDetails from './pages/ItineraryDetails';
-import AgenticPlanner from './components/itineraries/AgenticPlanner';
 import Quotes from './pages/Quotes';
 import Finance from './pages/Finance';
 import Settings from './pages/Settings';
@@ -110,7 +109,6 @@ function AppRoutes() {
 
                 <Route path="/itineraries" element={<Itineraries />} />
                 <Route path="/itineraries/:id" element={<ItineraryDetails />} />
-                <Route path="/copilot" element={<AgenticPlanner />} />
                 <Route path="/bookings" element={<Bookings />} />
                 <Route path="/resorts" element={<Resorts />} />
                 <Route path="/resorts/:id" element={<ResortDetails />} />

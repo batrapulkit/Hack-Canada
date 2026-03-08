@@ -21,7 +21,7 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey);
 const callGemini = async (systemPrompt, userMessage) => {
     if (!GEMINI_API_KEY) throw new Error("No Gemini API key configured.");
     const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" }); // Changed to 1.5-flash for better performance
+    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
     const result = await model.generateContent(`${systemPrompt}\n\n${userMessage}`);
     return result.response.text().trim();
 };
@@ -115,19 +115,7 @@ Return ONLY valid JSON in this exact format:
 Do not output markdown, backticks, or explanations. Only raw JSON.`;
 
         if (!GEMINI_API_KEY) {
-            // Mock response for development
-            return res.json({
-                success: true,
-                source: 'mock',
-                keywords: [
-                    { term: destination || 'Canada', category: 'destination', valid: true, confidence: 'high', note: null },
-                    { term: 'hotel', category: 'accommodation', valid: true, confidence: 'high', note: null },
-                    { term: `${duration} days`, category: 'logistics', valid: true, confidence: 'medium', note: null },
-                ],
-                overall_score: 88,
-                flags: [],
-                recommendation: 'Plan looks solid. Configure Gemini API key for full AI verification.',
-            });
+            return res.status(500).json({ error: 'AI key not configured' });
         }
 
         console.log('[Verify] Verifying plan keywords via Gemini...');

@@ -445,7 +445,7 @@ async function generateFallbackResorts(destination, criteria = {}) {
         console.log(`[ResortService] Asking Gemini for resorts in ${destination}...`);
 
         // 1. Get Model
-        const model = getModel('gemini-2.5-flash');
+        const model = getModel(); // Uses .env default
 
         // 2. prompt
         const prompt = `You are a luxury travel agent.
@@ -523,7 +523,7 @@ async function generateFallbackResorts(destination, criteria = {}) {
  */
 async function generateGeminiResortDetails(resortName, location, resortId) {
     try {
-        const model = getModel('gemini-2.5-flash');
+        const model = getModel(); // Uses .env default
         const prompt = `You are a hotel inventory manager.
         Create 3 realistic vacation packages/room offers for: "${resortName}" located in "${location}".
         

@@ -11,16 +11,16 @@ if (!process.env.GEMINI_API_KEY) {
 export const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 export function getModel(modelName) {
-  const model = modelName || process.env.GEMINI_MODEL || 'gemini-2.5-flash-lite';
+  const model = modelName || process.env.GEMINI_MODEL || 'gemini-2.0-flash';
   return genAI.getGenerativeModel({ model });
 }
 
 export function getSearchEnabledModel(modelName) {
-  const model = modelName || 'gemini-2.5-flash'; // Use Standard Flash for Tools/Search validity
+  const model = modelName || process.env.GEMINI_MODEL || 'gemini-2.0-flash'; // Standardize on 2.0-flash
   return genAI.getGenerativeModel({
     model,
     tools: [{ googleSearch: {} }]
   });
 }
 
-console.log('✅ Gemini AI initialized (gemini-2.5-flash series ready)');
+console.log('✅ Gemini AI initialized (gemini series ready)');

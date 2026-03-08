@@ -1164,6 +1164,7 @@ export const parseLeadFromText = async (req, res) => {
 
   try {
     console.log('[AI] Parsing Lead from text...');
+    logToFile('[AI] Parsing Lead from text...');
 
     // 1. Try Primary Model (Lite)
     let raw;
@@ -1177,7 +1178,7 @@ export const parseLeadFromText = async (req, res) => {
       if (primaryErr.message && primaryErr.message.includes('429')) {
         // 2. Try Fallback Model (Standard Flash)
         console.log('⚠️ Switching to Fallback Model...');
-        const fallbackModel = getModel(process.env.GEMINI_FALLBACK_MODEL || 'gemini-2.5-flash');
+        const fallbackModel = getModel(process.env.GEMINI_FALLBACK_MODEL || 'gemini-2.0-flash');
         const result = await fallbackModel.generateContent(prompt);
         const response = await result.response;
         raw = response.text();
@@ -1196,6 +1197,7 @@ export const parseLeadFromText = async (req, res) => {
       jsonStr = cleanRaw.substring(jsonStart, jsonEnd + 1);
     }
 
+    logToFile(`[AI Parse-Lead] Raw Response: ${raw}`);
     const parsedData = JSON.parse(jsonStr);
 
     console.log('[AI Parse-Lead] Extracted data:', {
@@ -1211,6 +1213,7 @@ export const parseLeadFromText = async (req, res) => {
 
   } catch (err) {
     console.error('AI Lead Parse error (Final):', err.message);
+    logToFile(`AI Lead Parse error (Final): ${err.message} \n ${err.stack}`);
 
     if (err.message && err.message.includes('429')) {
       return res.status(429).json({

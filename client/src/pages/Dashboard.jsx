@@ -18,7 +18,6 @@ import { cn } from "@/lib/utils";
 import { format } from "date-fns";
 import CreateClientDialog from '../components/crm/CreateClientDialog';
 import RedeemCouponDialog from '../components/dashboard/RedeemCouponDialog';
-import AgenticPlanner from '../components/itineraries/AgenticPlanner';
 
 export default function Dashboard() {
   const navigate = useNavigate();
@@ -179,10 +178,7 @@ export default function Dashboard() {
         </div>
       </div>
 
-      {/* 2. Agentic Swarm Input (Hackathon Demo Feature) */}
-      <AgenticPlanner />
-
-      {/* 3. KPI Cards */}
+      {/* 2. Dashboard KPIs & Content */}
       <KPICards stats={stats} />
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">

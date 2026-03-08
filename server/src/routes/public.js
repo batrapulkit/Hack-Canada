@@ -98,18 +98,7 @@ Return ONLY valid JSON in this exact format:
 Do not output markdown, backticks, or explanations. Only raw JSON.`;
 
         if (!GEMINI_API_KEY) {
-            return res.json({
-                success: true,
-                source: 'mock',
-                keywords: [
-                    { term: destination || 'Canada', category: 'destination', valid: true, confidence: 'high', note: null },
-                    { term: 'hotel', category: 'accommodation', valid: true, confidence: 'high', note: null },
-                    { term: `${duration} days`, category: 'logistics', valid: true, confidence: 'medium', note: null },
-                ],
-                overall_score: 88,
-                flags: [],
-                recommendation: 'Plan looks solid. Configure Gemini API key for full AI verification.',
-            });
+            return res.status(500).json({ error: 'AI key not configured' });
         }
 
         console.log(`[Public Verify] Verifying via Gemini (${process.env.GEMINI_MODEL || 'gemini-2.0-flash'})...`);
@@ -124,14 +113,8 @@ Do not output markdown, backticks, or explanations. Only raw JSON.`;
             verificationResult = JSON.parse(text.replace(/```json|```/g, '').trim());
             console.log(`[Public Verify] Score: ${verificationResult.score}/100 | Keywords: ${verificationResult.keywordsFound?.length || 0}`);
         } catch (aiError) {
-            console.error('[Public Verify] AI Fail-Safe Triggered:', aiError.message);
-            // FALLBACK FOR HACKATHON: Ensure the demo always shows a "Verified" state
-            verificationResult = {
-                passed: true,
-                score: 98,
-                keywordsFound: ["Flight", "Hotel", "Transfer", "Tour"],
-                feedback: "Itinerary looks professional and well-structured for travel."
-            };
+            console.error('[Public Verify] AI Failure:', aiError.message);
+            throw aiError;
         }
 
         res.json({
