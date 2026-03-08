@@ -1,0 +1,50 @@
+[
+  {
+    "id": "95bb1d86-5135-4d3e-9134-8912781c175f",
+    "email": "pulkit@triponic.com",
+    "role": "super_admin",
+    "status": "active"
+  },
+  {
+    "id": "40db5688-dce4-41a3-be4a-4bd6450e169e",
+    "email": "ajay.kumar@mydreamtravel.ca",
+    "role": "admin",
+    "status": "active"
+  },
+  {
+    "id": "18024ec3-6a16-437e-8168-d122343507fe",
+    "email": "singhflights@gmail.com",
+    "role": "admin",
+    "status": "active"
+  },
+  {
+    "id": "1c0a09a4-d738-4656-90cb-cf8d1c116c74",
+    "email": "bugcrowd1103@gmail.com",
+    "role": "admin",
+    "status": "active"
+  },
+  {
+    "id": "62cdd52a-70e4-48dd-8c88-28aaaa477ac6",
+    "email": "demo@triponic.com",
+    "role": "admin",
+    "status": "active"
+  },
+  {
+    "id": "5d21bcfa-b4c3-48b1-9575-7120eae5bb61",
+    "email": "flightsmaharaja@gmail.com",
+    "role": "admin",
+    "status": "active"
+  },
+  {
+    "id": "67d3dfc7-1334-4682-8d21-6e748ac800aa",
+    "email": "Apatel@thetravelagentnextdoor.com",
+    "role": "admin",
+    "status": "active"
+  },
+  {
+    "id": "e4e5f268-42d8-4429-b69c-d92600c6ac47",
+    "email": "dipak@akshartravel.ca",
+    "role": "admin",
+    "status": "active"
+  }
+]

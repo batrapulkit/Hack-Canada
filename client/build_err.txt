@@ -1,0 +1,522 @@
+﻿node : 
+node:child_process:957
+At line:1 char:1
++ node -e "require('ch
+ild_process').execSync
+('npx vite build 
+--mode dev ...
++ ~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~
+    + CategoryInfo    
+          : NotSpeci  
+  fied: (node:child   
+ _process:957:Stri    
+ng) [], RemoteExc    
+eption
+    + FullyQualifiedE 
+   rrorId : NativeCo  
+  mmandError
+ 
+    throw err;
+    ^
+
+Error: Command 
+failed: npx vite 
+build --mode 
+development
+[31mΓ£ù[39m Build 
+failed in 376ms
+[31merror during 
+build:
+[31m[vite:esbuild] 
+Transform failed with 
+3 errors:
+E:/B2B 44/triponic-b2b
+/client/src/pages/Part
+nersLanding.jsx:732:18
+: ERROR: Unexpected 
+closing "div" tag 
+does not match 
+opening "section" tag
+E:/B2B 44/triponic-b2b
+/client/src/pages/Part
+nersLanding.jsx:733:14
+: ERROR: Unexpected 
+closing "section" tag 
+does not match 
+opening "div" tag
+E:/B2B 44/triponic-b2b
+/client/src/pages/Part
+nersLanding.jsx:735:12
+: ERROR: Expected ")" 
+but found "{"[31m
+file: [36mE:/B2B 44/t
+riponic-b2b/client/src
+/pages/PartnersLanding
+.jsx:732:18[31m
+[33m
+[33mUnexpected 
+closing "div" tag 
+does not match 
+opening "section" 
+tag[33m
+730 |                 
+         </div>
+731 |                 
+     </Reveal>
+732 |                 
+ </div>
+    |                 
+   ^
+733 |              
+</section>
+734 |  
+
+[33mUnexpected 
+closing "section" tag 
+does not match 
+opening "div" tag[33m
+731 |                 
+     </Reveal>
+732 |                 
+ </div>
+733 |              
+</section>
+    |                ^
+734 |  
+735 |              
+{/* ΓòÉΓòÉΓòÉ 
+TESTIMONIALS 
+ΓòÉΓòÉΓòÉ */}
+
+[33mExpected ")" but 
+found "{"[33m
+733 |              
+</section>
+734 |  
+735 |              
+{/* ΓòÉΓòÉΓòÉ 
+TESTIMONIALS 
+ΓòÉΓòÉΓòÉ */}
+    |              ^
+736 |              
+<section 
+id="testimonials" 
+className="py-24 px-6 
+lg:px-8 
+bg-slate-900/30">
+737 |                 
+ <div 
+className="max-w-7xl 
+mx-auto">
+[31m
+    at 
+failureErrorWithLog 
+(e:\B2B 44\triponic-b2
+b\client\node_modules\
+esbuild\lib\main.js:14
+67:15)
+    at e:\B2B 44\tripo
+nic-b2b\client\node_mo
+dules\esbuild\lib\main
+.js:736:50
+    at responseCallbac
+ks.<computed> (e:\B2B 
+44\triponic-b2b\client
+\node_modules\esbuild\
+lib\main.js:603:9)
+    at 
+handleIncomingPacket 
+(e:\B2B 44\triponic-b2
+b\client\node_modules\
+esbuild\lib\main.js:65
+8:12)
+    at 
+Socket.readFromStdout 
+(e:\B2B 44\triponic-b2
+b\client\node_modules\
+esbuild\lib\main.js:58
+1:7)
+    at Socket.emit 
+(node:events:524:28)
+    at addChunk (node:
+internal/streams/reada
+ble:561:12)
+    at readableAddChun
+kPushByteMode (node:in
+ternal/streams/readabl
+e:512:3)
+    at Readable.push (
+node:internal/streams/
+readable:392:5)
+    at 
+Pipe.onStreamRead (nod
+e:internal/stream_base
+_commons:189:23)[39m
+
+    at 
+genericNodeError (node
+:internal/errors:983:1
+5)
+    at wrappedFn (node
+:internal/errors:537:1
+4)
+    at 
+checkExecSyncError (no
+de:child_process:882:1
+1)
+    at 
+Object.execSync (node:
+child_process:954:15)
+    at [eval]:1:26
+    at runScriptInThis
+Context (node:internal
+/vm:209:10)
+    at node:internal/p
+rocess/execution:118:1
+4
+    at 
+[eval]-wrapper:6:24
+    at runScript (node
+:internal/process/exec
+ution:101:62)
+    at evalScript (nod
+e:internal/process/exe
+cution:136:3) {
+  status: 1,
+  signal: null,
+  output: [
+    null,
+    '\x1B[36mvite 
+v7.2.2 
+\x1B[32mbuilding 
+client environment 
+for development...\x1B
+[36m\x1B[39m\n' +
+      
+'transforming...\n' +
+      
+'\x1B[32mΓ£ô\x1B[39m 
+35 modules 
+transformed.\n',
+    
+'\x1B[31mΓ£ù\x1B[39m 
+Build failed in 
+376ms\n' +
+      '\x1B[31merror 
+during build:\n' +
+      '\x1B[31m[vite:e
+sbuild] Transform 
+failed with 3 
+errors:\n' +
+      'E:/B2B 44/tripo
+nic-b2b/client/src/pag
+es/PartnersLanding.jsx
+:732:18: ERROR: 
+Unexpected closing 
+"div" tag does not 
+match opening 
+"section" tag\n' +
+      'E:/B2B 44/tripo
+nic-b2b/client/src/pag
+es/PartnersLanding.jsx
+:733:14: ERROR: 
+Unexpected closing 
+"section" tag does 
+not match opening 
+"div" tag\n' +
+      'E:/B2B 44/tripo
+nic-b2b/client/src/pag
+es/PartnersLanding.jsx
+:735:12: ERROR: 
+Expected ")" but 
+found "{"\x1B[31m\n' +
+      'file: 
+\x1B[36mE:/B2B 44/trip
+onic-b2b/client/src/pa
+ges/PartnersLanding.js
+x:732:18\x1B[31m\n' +
+      '\x1B[33m\n' +
+      
+'\x1B[33mUnexpected 
+closing "div" tag 
+does not match 
+opening "section" 
+tag\x1B[33m\n' +
+      '730 |          
+                
+</div>\n' +
+      '731 |          
+            
+</Reveal>\n' +
+      '732 |          
+        </div>\n' +
+      '    |          
+          ^\n' +
+      '733 |          
+    </section>\n' +
+      '734 |  \n' +
+      '\n' +
+      
+'\x1B[33mUnexpected 
+closing "section" tag 
+does not match 
+opening "div" 
+tag\x1B[33m\n' +
+      '731 |          
+            
+</Reveal>\n' +
+      '732 |          
+        </div>\n' +
+      '733 |          
+    </section>\n' +
+      '    |          
+      ^\n' +
+      '734 |  \n' +
+      '735 |          
+    {/* ΓòÉΓòÉΓòÉ 
+TESTIMONIALS 
+ΓòÉΓòÉΓòÉ */}\n' +
+      '\n' +
+      
+'\x1B[33mExpected ")" 
+but found 
+"{"\x1B[33m\n' +
+      '733 |          
+    </section>\n' +
+      '734 |  \n' +
+      '735 |          
+    {/* ΓòÉΓòÉΓòÉ 
+TESTIMONIALS 
+ΓòÉΓòÉΓòÉ */}\n' +
+      '    |          
+    ^\n' +
+      '736 |          
+    <section 
+id="testimonials" 
+className="py-24 px-6 
+lg:px-8 
+bg-slate-900/30">\n' +
+      '737 |          
+        <div 
+className="max-w-7xl 
+mx-auto">\n' +
+      '\x1B[31m\n' +
+      '    at 
+failureErrorWithLog 
+(e:\\B2B 44\\triponic-
+b2b\\client\\node_modu
+les\\esbuild\\lib\\mai
+n.js:1467:15)\n' +
+      '    at e:\\B2B 
+44\\triponic-b2b\\clie
+nt\\node_modules\\esbu
+ild\\lib\\main.js:736:
+50\n' +
+      '    at response
+Callbacks.<computed> 
+(e:\\B2B 44\\triponic-
+b2b\\client\\node_modu
+les\\esbuild\\lib\\mai
+n.js:603:9)\n' +
+      '    at 
+handleIncomingPacket 
+(e:\\B2B 44\\triponic-
+b2b\\client\\node_modu
+les\\esbuild\\lib\\mai
+n.js:658:12)\n' +
+      '    at 
+Socket.readFromStdout 
+(e:\\B2B 44\\triponic-
+b2b\\client\\node_modu
+les\\esbuild\\lib\\mai
+n.js:581:7)\n' +
+      '    at 
+Socket.emit (node:even
+ts:524:28)\n' +
+      '    at 
+addChunk (node:interna
+l/streams/readable:561
+:12)\n' +
+      '    at readable
+AddChunkPushByteMode (
+node:internal/streams/
+readable:512:3)\n' +
+      '    at 
+Readable.push (node:in
+ternal/streams/readabl
+e:392:5)\n' +
+      '    at 
+Pipe.onStreamRead (nod
+e:internal/stream_base
+_commons:189:23)\x1B[3
+9m\n'
+  ],
+  pid: 35480,
+  stdout: 
+'\x1B[36mvite v7.2.2 
+\x1B[32mbuilding 
+client environment 
+for development...\x1B
+[36m\x1B[39m\n' +
+    
+'transforming...\n' +
+    
+'\x1B[32mΓ£ô\x1B[39m 
+35 modules 
+transformed.\n',
+  stderr: 
+'\x1B[31mΓ£ù\x1B[39m 
+Build failed in 
+376ms\n' +
+    '\x1B[31merror 
+during build:\n' +
+    '\x1B[31m[vite:esb
+uild] Transform 
+failed with 3 
+errors:\n' +
+    'E:/B2B 44/triponi
+c-b2b/client/src/pages
+/PartnersLanding.jsx:7
+32:18: ERROR: 
+Unexpected closing 
+"div" tag does not 
+match opening 
+"section" tag\n' +
+    'E:/B2B 44/triponi
+c-b2b/client/src/pages
+/PartnersLanding.jsx:7
+33:14: ERROR: 
+Unexpected closing 
+"section" tag does 
+not match opening 
+"div" tag\n' +
+    'E:/B2B 44/triponi
+c-b2b/client/src/pages
+/PartnersLanding.jsx:7
+35:12: ERROR: 
+Expected ")" but 
+found "{"\x1B[31m\n' +
+    'file: 
+\x1B[36mE:/B2B 44/trip
+onic-b2b/client/src/pa
+ges/PartnersLanding.js
+x:732:18\x1B[31m\n' +
+    '\x1B[33m\n' +
+    
+'\x1B[33mUnexpected 
+closing "div" tag 
+does not match 
+opening "section" 
+tag\x1B[33m\n' +
+    '730 |            
+              
+</div>\n' +
+    '731 |            
+          
+</Reveal>\n' +
+    '732 |            
+      </div>\n' +
+    '    |            
+        ^\n' +
+    '733 |            
+  </section>\n' +
+    '734 |  \n' +
+    '\n' +
+    
+'\x1B[33mUnexpected 
+closing "section" tag 
+does not match 
+opening "div" 
+tag\x1B[33m\n' +
+    '731 |            
+          
+</Reveal>\n' +
+    '732 |            
+      </div>\n' +
+    '733 |            
+  </section>\n' +
+    '    |            
+    ^\n' +
+    '734 |  \n' +
+    '735 |            
+  {/* ΓòÉΓòÉΓòÉ 
+TESTIMONIALS 
+ΓòÉΓòÉΓòÉ */}\n' +
+    '\n' +
+    '\x1B[33mExpected 
+")" but found 
+"{"\x1B[33m\n' +
+    '733 |            
+  </section>\n' +
+    '734 |  \n' +
+    '735 |            
+  {/* ΓòÉΓòÉΓòÉ 
+TESTIMONIALS 
+ΓòÉΓòÉΓòÉ */}\n' +
+    '    |            
+  ^\n' +
+    '736 |            
+  <section 
+id="testimonials" 
+className="py-24 px-6 
+lg:px-8 
+bg-slate-900/30">\n' +
+    '737 |            
+      <div 
+className="max-w-7xl 
+mx-auto">\n' +
+    '\x1B[31m\n' +
+    '    at 
+failureErrorWithLog 
+(e:\\B2B 44\\triponic-
+b2b\\client\\node_modu
+les\\esbuild\\lib\\mai
+n.js:1467:15)\n' +
+    '    at e:\\B2B 44
+\\triponic-b2b\\client
+\\node_modules\\esbuil
+d\\lib\\main.js:736:50
+\n' +
+    '    at responseCa
+llbacks.<computed> 
+(e:\\B2B 44\\triponic-
+b2b\\client\\node_modu
+les\\esbuild\\lib\\mai
+n.js:603:9)\n' +
+    '    at 
+handleIncomingPacket 
+(e:\\B2B 44\\triponic-
+b2b\\client\\node_modu
+les\\esbuild\\lib\\mai
+n.js:658:12)\n' +
+    '    at 
+Socket.readFromStdout 
+(e:\\B2B 44\\triponic-
+b2b\\client\\node_modu
+les\\esbuild\\lib\\mai
+n.js:581:7)\n' +
+    '    at 
+Socket.emit (node:even
+ts:524:28)\n' +
+    '    at addChunk (
+node:internal/streams/
+readable:561:12)\n' +
+    '    at readableAd
+dChunkPushByteMode (no
+de:internal/streams/re
+adable:512:3)\n' +
+    '    at 
+Readable.push (node:in
+ternal/streams/readabl
+e:392:5)\n' +
+    '    at 
+Pipe.onStreamRead (nod
+e:internal/stream_base
+_commons:189:23)\x1B[3
+9m\n'
+}
+
+Node.js v22.12.0

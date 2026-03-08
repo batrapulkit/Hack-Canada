@@ -1,0 +1,1 @@
+ALTER TABLE itineraries ADD COLUMN IF NOT EXISTS currency text DEFAULT 'USD';

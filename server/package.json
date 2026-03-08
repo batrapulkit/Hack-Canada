@@ -1,0 +1,43 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --transform {}"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@elevenlabs/elevenlabs-js": "^2.38.1",
+    "@google/generative-ai": "^0.24.1",
+    "@supabase/supabase-js": "^2.81.1",
+    "axios": "^1.13.6",
+    "bcryptjs": "^3.0.3",
+    "cloudinary": "^2.9.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "elevenlabs": "^1.59.0",
+    "express": "^5.1.0",
+    "express-oauth2-jwt-bearer": "^1.7.4",
+    "express-rate-limit": "^8.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.1",
+    "multer": "^2.0.2",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^7.0.11",
+    "pdfkit": "^0.17.2",
+    "pg": "^8.16.3",
+    "qrcode": "^1.5.4",
+    "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.5",
+    "jest": "^30.2.0",
+    "nodemon": "^3.1.11"
+  }
+}

@@ -1,0 +1,11 @@
+-- Add compliance fields to agencies table
+ALTER TABLE agencies 
+ADD COLUMN IF NOT EXISTS phone TEXT,
+ADD COLUMN IF NOT EXISTS address_line1 TEXT,
+ADD COLUMN IF NOT EXISTS address_line2 TEXT,
+ADD COLUMN IF NOT EXISTS city TEXT,
+ADD COLUMN IF NOT EXISTS state TEXT,
+ADD COLUMN IF NOT EXISTS zip TEXT,
+ADD COLUMN IF NOT EXISTS country TEXT,
+ADD COLUMN IF NOT EXISTS tico_registration_number TEXT,
+ADD COLUMN IF NOT EXISTS invoice_settings JSONB DEFAULT '{}'::jsonb;

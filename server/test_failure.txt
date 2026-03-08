@@ -1,0 +1,113 @@
+﻿
+> server@1.0.0 test
+> node --experimental-vm-modules node_modules/jest/bin/jest.js --transform {} tests/auth.test.js
+
+node.exe : 
+(node:33472) 
+ExperimentalWarning: 
+VM Modules is an 
+experimental feature 
+and might change at 
+any time
+At C:\Program Files\no
+dejs\npm.ps1:29 char:3
++   & $NODE_EXE 
+$NPM_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~
+    + CategoryInfo    
+          : NotSpeci  
+  fied: ((node:3347   
+ 2) Ex...nge at an    
+y time:String) []    
+, RemoteException
+    + FullyQualifiedE 
+   rrorId : NativeCo  
+  mmandError
+ 
+(Use `node 
+--trace-warnings ...` 
+to show where the 
+warning was created)
+FAIL 
+tests/auth.test.js
+  Auth Controller
+    register
+      ΓêÜ should 
+return 400 if fields 
+are missing (5 ms)
+    login
+      ΓêÜ should 
+return 400 if email 
+or password missing 
+(1 ms)
+      ΓêÜ should 
+login successfully 
+with local user (2 ms)
+      ├ù should sync 
+user when email 
+mismatches 
+(Self-Healing) (2 ms)
+
+  ΓùÅ Auth Controller 
+ΓÇ║ login ΓÇ║ should 
+sync user when email 
+mismatches 
+(Self-Healing)
+
+    expect(jest.fn()).
+toHaveBeenCalledWith(.
+..expected)
+
+    Expected: 
+ObjectContaining 
+{"email": 
+"newemail@test.com"}
+
+    Number of calls: 0
+
+    [0m [90m 140 
+|[39m             
+[36mawait[39m authCo
+ntroller[33m.[39mlog
+in(req[33m,[39m 
+res)[33m;[39m
+     [90m 141 |[39m
+    [31m[1m>[22m[3
+9m[90m 142 |[39m    
+         expect(mockCh
+ain[33m.[39mupdate)
+[33m.[39mtoHaveBeenCa
+lledWith(expect[33m.
+[39mobjectContaining({
+     [90m     |[39m 
+                      
+               
+[31m[1m^[22m[39m
+     [90m 143 |[39m 
+                
+email[33m:[39m [32m
+'newemail@test.com'[3
+9m
+     [90m 144 |[39m 
+            
+}))[33m;[39m
+     [90m 145 
+|[39m[0m
+
+      at 
+Object.<anonymous> (te
+sts/auth.test.js:142:3
+8)
+
+Test Suites: 1 
+failed, 1 total
+Tests:       1 
+failed, 3 passed, 4 
+total
+Snapshots:   0 total
+Time:        0.176 s, 
+estimated 1 s
+Ran all test suites 
+matching 
+tests/auth.test.js.

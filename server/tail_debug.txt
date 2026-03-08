@@ -1,0 +1,50 @@
+﻿[2026-01-12T21:28:41.970Z] [REQUEST] GET /api/settings Origin: http://localhost:5173
+[2026-01-12T21:28:41.978Z] [CLIENTS] [GetClients] Success. Found 42 records.
+[2026-01-12T21:28:41.981Z] [REQUEST] GET /api/clients Origin: http://localhost:5173
+[2026-01-12T21:28:41.997Z] [REQUEST] GET /api/clients/stats Origin: http://localhost:5173
+[2026-01-12T21:28:42.179Z] [REQUEST] GET /api/itineraries?limit=100 Origin: http://localhost:5173
+[2026-01-12T21:28:42.246Z] [REQUEST] GET /api/settings Origin: http://localhost:5173
+[2026-01-12T21:28:42.610Z] [CLIENTS] [GetClients] Request from User: 1c0a09a4-d738-4656-90cb-cf8d1c116c74, Agency: 4fa63a8d-e667-4fce-bb72-509e26c8c50f
+[2026-01-12T21:28:42.682Z] [CLIENTS] [GetClients] Orphaned clients adopted to agency 4fa63a8d-e667-4fce-bb72-509e26c8c50f
+[2026-01-12T21:28:42.752Z] [CLIENTS] [GetClients] Success. Found 42 records.
+[2026-01-12T21:28:42.786Z] [REQUEST] GET /api/invoices Origin: http://localhost:5173
+[2026-01-12T21:28:42.837Z] [REQUEST] GET /api/settings Origin: http://localhost:5173
+[2026-01-12T21:29:07.441Z] [REQUEST] OPTIONS /api/ai/parse-lead Origin: http://localhost:5173
+[2026-01-12T21:29:07.443Z] [REQUEST] POST /api/ai/parse-lead Origin: http://localhost:5173
+[2026-01-12T21:29:10.334Z] [REQUEST] OPTIONS /api/clients Origin: http://localhost:5173
+[2026-01-12T21:29:10.336Z] [REQUEST] POST /api/clients Origin: http://localhost:5173
+[2026-01-12T21:29:10.526Z] [REQUEST] OPTIONS /api/invoices Origin: http://localhost:5173
+[2026-01-12T21:29:10.529Z] [REQUEST] POST /api/invoices Origin: http://localhost:5173
+
+[INVOICE DEBUG] Payload: {"client_id":"7f600cd5-3d1b-40a4-bbb0-cc2bf9275a2d","status":"draft","issue_date":"2026-01-12T21:29:10.525Z","due_date":"2026-01-19T21:29:10.525Z","items":[{"description":"Estimated Trip Cost: india","quantity":1,"unit_price":10000}],"notes":"Auto-generated from AI inquiry extraction.\nTrip: india\nDates:  - "}
+[INVOICE DEBUG] User: {"id":"1c0a09a4-d738-4656-90cb-cf8d1c116c74","agency_id":"4fa63a8d-e667-4fce-bb72-509e26c8c50f","email":"bugcrowd1103@gmail.com","name":"Pulkit Batra","password_hash":"$2b$10$KVO/SIRlqMHOOah0pY9lwOl6YXQ9HU0QgYKG/ShA4CH94HTU2U7CO","role":"admin","status":"active","created_at":"2025-11-30T01:46:48.765+00:00","updated_at":"2025-11-30T01:46:48.863871+00:00","agencies":{"id":"4fa63a8d-e667-4fce-bb72-509e26c8c50f","address":null,"website":null,"logo_url":null,"max_users":5,"smtp_host":"smtp.hostinger.com","smtp_pass":"Jaibholenath@2077","smtp_port":"465","smtp_user":"info@triponic.com","created_at":"2025-11-30T01:46:48.449+00:00","updated_at":"2026-01-06T15:18:25.033+00:00","agency_name":"TravelPro","usage_count":5,"usage_limit":10,"contact_email":"bugcrowd1103@gmail.com","contact_phone":null,"primary_color":"#7c3aed","secondary_color":"#ec4899","whatsapp_number":null,"itinerary_credits":4,"subscription_plan":"free","subscription_status":"active"}}
+[2026-01-12T21:29:10.915Z] [REQUEST] GET /api/clients Origin: http://localhost:5173
+[2026-01-12T21:29:10.919Z] [REQUEST] OPTIONS /api/itineraries?limit=100 Origin: http://localhost:5173
+[2026-01-12T21:29:10.921Z] [REQUEST] OPTIONS /api/clients/stats Origin: http://localhost:5173
+[2026-01-12T21:29:10.922Z] [REQUEST] OPTIONS /api/bookings Origin: http://localhost:5173
+[2026-01-12T21:29:10.923Z] [REQUEST] OPTIONS /api/settings Origin: http://localhost:5173
+[2026-01-12T21:29:10.924Z] [REQUEST] GET /api/invoices Origin: http://localhost:5173
+[2026-01-12T21:29:10.929Z] [REQUEST] GET /api/itineraries?limit=100 Origin: http://localhost:5173
+[2026-01-12T21:29:10.933Z] [REQUEST] GET /api/clients/stats Origin: http://localhost:5173
+[2026-01-12T21:29:10.936Z] [REQUEST] GET /api/bookings Origin: http://localhost:5173
+[2026-01-12T21:29:10.940Z] [REQUEST] GET /api/settings Origin: http://localhost:5173
+[2026-01-12T21:29:10.970Z] [REQUEST] OPTIONS /api/itineraries Origin: http://localhost:5173
+[2026-01-12T21:29:11.126Z] [CLIENTS] [GetClients] Request from User: 1c0a09a4-d738-4656-90cb-cf8d1c116c74, Agency: 4fa63a8d-e667-4fce-bb72-509e26c8c50f
+[2026-01-12T21:29:11.198Z] [CLIENTS] [GetClients] Orphaned clients adopted to agency 4fa63a8d-e667-4fce-bb72-509e26c8c50f
+[2026-01-12T21:29:11.278Z] [REQUEST] GET /api/itineraries Origin: http://localhost:5173
+[2026-01-12T21:29:11.284Z] [CLIENTS] [GetClients] Success. Found 43 records.
+[2026-01-12T21:29:11.287Z] [REQUEST] GET /api/clients Origin: http://localhost:5173
+[2026-01-12T21:29:11.447Z] [CLIENTS] [GetClients] Request from User: 1c0a09a4-d738-4656-90cb-cf8d1c116c74, Agency: 4fa63a8d-e667-4fce-bb72-509e26c8c50f
+[2026-01-12T21:29:11.544Z] [CLIENTS] [GetClients] Orphaned clients adopted to agency 4fa63a8d-e667-4fce-bb72-509e26c8c50f
+[2026-01-12T21:29:11.642Z] [CLIENTS] [GetClients] Success. Found 43 records.
+[2026-01-12T21:29:11.646Z] [REQUEST] GET /api/clients Origin: http://localhost:5173
+[2026-01-12T21:29:11.765Z] [CLIENTS] [GetClients] Request from User: 1c0a09a4-d738-4656-90cb-cf8d1c116c74, Agency: 4fa63a8d-e667-4fce-bb72-509e26c8c50f
+[2026-01-12T21:29:11.933Z] [CLIENTS] [GetClients] Orphaned clients adopted to agency 4fa63a8d-e667-4fce-bb72-509e26c8c50f
+[2026-01-12T21:29:12.008Z] [CLIENTS] [GetClients] Success. Found 43 records.
+[2026-01-13T21:56:43.348Z] [AUTH] [Register Attempt] Email: test@test.com, Agency: undefined, Coupon: undefined
+[2026-01-13T21:56:43.349Z] [AUTH] [Register Failed] Missing fields
+[2026-01-13T21:56:43.353Z] [AUTH] [Login Attempt] Email: test@test.com
+[2026-01-13T21:56:43.355Z] [AUTH] [Login Attempt] Email: test@test.com
+[2026-01-13T21:56:43.356Z] [AUTH] [Login] Bcrypt check for test@test.com: Match=true
+[2026-01-13T21:56:43.356Z] [AUTH] [Login] Agency data fetched: Test Agency
+[2026-01-13T21:56:43.356Z] [AUTH] [Login Success] Token generated

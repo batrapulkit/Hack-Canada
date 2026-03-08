@@ -1,0 +1,16 @@
+{
+    "name": "triponic-b2b",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Triponic B2B Platform - Monorepo",
+    "scripts": {
+        "start": "npm run build:client && npm --prefix server start:prod",
+        "build:client": "cd client && npm ci && npm run build",
+        "dev:server": "npm --prefix server run dev",
+        "dev:client": "npm --prefix client run dev"
+    },
+    "engines": {
+        "node": ">=18.0.0",
+        "npm": ">=9.0.0"
+    }
+}

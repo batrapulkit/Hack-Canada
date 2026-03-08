@@ -1,0 +1,8 @@
+Checking Itinerary: 3e71bf3e-321c-448f-a7a3-8b17ccc06039
+Duration: 2
+Travelers: 1
+Destination: Bali
+AI JSON Keys: daily, hotel, title, summary, duration, destination, travel_tips, local_cuisine, estimated_total_cost
+Summary (first 100 chars): Experience the magic of Bali with this curated 2-day luxury itinerary for Mostafa. Indulge in privat
+Description: undefined
+AI Content String (type): string
